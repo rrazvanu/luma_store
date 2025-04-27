@@ -21,7 +21,7 @@ This is a test automation framework built in Python, designed to automate variou
 1. Clone the repository:
 
 ```
-https://gitlab.simartis.ro/the-awesome-automation-team/esim-vsm-operator-web.git
+https://github.com/rrazvanu/luma_store.git
 ```
 
 2. Install the required Python packages:

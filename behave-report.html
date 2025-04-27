@@ -1094,7 +1094,7 @@ async function render_content(element) {
 </script>
   </head>
   <body onload="body_onload();">
-    <div class="global-summary flex-gap passed">
+    <div class="global-summary flex-gap failed">
       <h2>LUMA STORE UI - Test Suite Report</h2>
       <span class="button flex-left-space" data-next-value="dark" data-value="auto" id="dark_mode_toggle" onclick="toggle_dark_mode()">Dark mode</span>
       <span class="button" id="high_contrast" onclick="toggle_hash('high_contrast')">High contrast toggle</span>
@@ -1102,30 +1102,29 @@ async function render_content(element) {
     </div>
     <div class="feature-summary-container flex-gap " id="summary-global">
       <div class="feature-summary-stats">
-        <div class="feature-summary-row">Features: 1 passed, 0 failed, 0 undefined, 1 skipped.</div>
-        <div class="feature-summary-row">Scenarios: 1 passed, 0 failed, 0 undefined, 0 skipped.</div>
+        <div class="feature-summary-row">Features: 1 passed, 1 failed, 0 undefined, 0 skipped.</div>
+        <div class="feature-summary-row">Scenarios: 5 passed, 1 failed, 0 undefined, 0 skipped.</div>
       </div>
       <div class="feature-summary-stats flex-left-space">
-        <div class="feature-summary-row">Started: 27-04-2025 18:26:33</div>
-        <div class="feature-summary-row">Duration: 10.99s.</div>
-        <div class="feature-summary-row">Finished: 27-04-2025 18:26:44</div>
+        <div class="feature-summary-row">Started: 27-04-2025 18:37:06</div>
+        <div class="feature-summary-row">Duration: 109.89s.</div>
+        <div class="feature-summary-row">Finished: 27-04-2025 18:38:56</div>
       </div>
     </div>
     <div class="feature-title flex-gap">
       <span>Feature: Login feature</span>
-      <span class="feature-started">Started: 27-04-2025 18:26:33</span>
+      <span class="feature-started">Started: 27-04-2025 18:37:06</span>
       <span class="button flex-left-space" onclick="toggle_hash('summary-f1')">Summary</span>
     </div>
     <div class="feature-summary-container flex-gap " data-feature-id="f1" id="summary-f1">
       <div class="feature-summary-stats ">
         <div class="feature-summary-row passed">Passed: 0</div>
-        <div class="feature-summary-row failed">Failed: 0</div>
-        <div class="feature-summary-row untested">Untested: 1</div>
+        <div class="feature-summary-row failed">Failed: 1</div>
       </div>
       <div class="feature-summary-stats flex-left-space">
-        <div class="feature-summary-row">Started: 27-04-2025 18:26:33</div>
-        <div class="feature-summary-row">Duration: 0.00</div>
-        <div class="feature-summary-row">Finished: 27-04-2025 18:26:33</div>
+        <div class="feature-summary-row">Started: 27-04-2025 18:37:06</div>
+        <div class="feature-summary-row">Duration: 23.59</div>
+        <div class="feature-summary-row">Finished: 27-04-2025 18:37:30</div>
       </div>
       <div class="feature-summary-stats">
         <span class="button display-block" onclick="expander('expand_all', this)">Expand All</span>
@@ -1140,7 +1139,7 @@ async function render_content(element) {
       </div>
     </div>
     <div class="feature-container" id="f1">
-      <div class="scenario-header untested " id="f1-s1-h">
+      <div class="scenario-header failed " id="f1-s1-h">
         <div class="scenario-tags">
           <span>@smoke</span>
         </div>
@@ -1155,26 +1154,75 @@ async function render_content(element) {
         </div>
         <div class="scenario-info">
           <div class="scenario-name" id="f1-s1" onclick="expand_this_only(this)">Scenario: Login - Successful authentication</div>
-          <div class="scenario-duration">Scenario duration: 0.00s</div>
+          <div class="scenario-duration">Scenario duration: 23.58s</div>
         </div>
       </div>
-      <div class="scenario-capsule untested " id="f1-s1-c"></div>
+      <div class="scenario-capsule failed " id="f1-s1-c">
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>Given </i></b>
+            <span>Login: I navigate to login page</span>
+          </div>
+          <div class="step-duration">(1.30s)</div>
+          <span class="flex-left-space">steps/login_steps.py:16</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Login: I complete valid credentials</span>
+          </div>
+          <div class="step-duration">(2.23s)</div>
+          <span class="flex-left-space">steps/login_steps.py:7</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule failed ">
+          <div class="step-status">FAIL</div>
+          <div class="step-decorator">
+            <b><i>Then </i></b>
+            <span>Login: I validate the successful login for </span>
+            <b>&quot;Razvan Iancu&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(20.04s)</div>
+          <span class="flex-left-space">steps/login_steps.py:29</span>
+        </div>
+        <div class="embeds">
+          <div class="messages">
+            <div class="embed-capsule">
+              <div class="embed_button " id="embed_button_4110" onclick="toggle_hash('4110')">Error Message</div>
+              <pre class="embed_content " id="embed_4110"><div><span class="button margin-bottom" onclick="download_embed('embed_4110','Error Message')">Download</span></div><span>Traceback (most recent call last):
+  File &quot;C:\Users\razvan.iancu\Anaconda3\envs\DMS-frontend-automation\lib\site-packages\behave\model.py&quot;, line 1329, in run
+    match.run(runner.context)
+  File &quot;C:\Users\razvan.iancu\Anaconda3\envs\DMS-frontend-automation\lib\site-packages\behave\matchers.py&quot;, line 98, in run
+    self.func(context, *args, **kwargs)
+  File &quot;steps\login_steps.py&quot;, line 31, in step_impl
+    context.login_page.validate_login(user_name)
+  File &quot;C:\Users\razvan.iancu\PycharmProjects\luma_store_\pages\login_page.py&quot;, line 30, in validate_login
+    self.wait_for_elem(*welcome_message[0]), &quot;The Welcome message is not displayed&quot;
+IndexError: list index out of range
+</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="feature-title flex-gap">
       <span>Feature: Order Placement feature</span>
-      <span class="feature-started">Started: 27-04-2025 18:26:33</span>
+      <span class="feature-started">Started: 27-04-2025 18:37:30</span>
       <span class="button flex-left-space" onclick="toggle_hash('summary-f2')">Summary</span>
     </div>
     <div class="feature-summary-container flex-gap " data-feature-id="f2" id="summary-f2">
       <div class="feature-summary-stats ">
-        <div class="feature-summary-row passed">Passed: 1</div>
+        <div class="feature-summary-row passed">Passed: 5</div>
         <div class="feature-summary-row failed">Failed: 0</div>
-        <div class="feature-summary-row untested">Untested: 4</div>
       </div>
       <div class="feature-summary-stats flex-left-space">
-        <div class="feature-summary-row">Started: 27-04-2025 18:26:33</div>
-        <div class="feature-summary-row">Duration: 10.98</div>
-        <div class="feature-summary-row">Finished: 27-04-2025 18:26:44</div>
+        <div class="feature-summary-row">Started: 27-04-2025 18:37:30</div>
+        <div class="feature-summary-row">Duration: 86.30</div>
+        <div class="feature-summary-row">Finished: 27-04-2025 18:38:56</div>
       </div>
       <div class="feature-summary-stats">
         <span class="button display-block" onclick="expander('expand_all', this)">Expand All</span>
@@ -1189,7 +1237,7 @@ async function render_content(element) {
       </div>
     </div>
     <div class="feature-container" id="f2">
-      <div class="scenario-header untested " id="f2-s1-h">
+      <div class="scenario-header passed " id="f2-s1-h">
         <div class="scenario-tags">
           <span>@smoke</span>
         </div>
@@ -1204,11 +1252,160 @@ async function render_content(element) {
         </div>
         <div class="scenario-info">
           <div class="scenario-name" id="f2-s1" onclick="expand_this_only(this)">Scenario: Order Placement : Order Placement success</div>
-          <div class="scenario-duration">Scenario duration: 0.00s</div>
+          <div class="scenario-duration">Scenario duration: 41.59s</div>
         </div>
       </div>
-      <div class="scenario-capsule untested " id="f2-s1-c"></div>
-      <div class="scenario-header untested " id="f2-s2-h">
+      <div class="scenario-capsule passed " id="f2-s1-c">
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>Given </i></b>
+            <span>Login: I navigate to login page</span>
+          </div>
+          <div class="step-duration">(1.42s)</div>
+          <span class="flex-left-space">steps/login_steps.py:16</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Login: I complete valid credentials</span>
+          </div>
+          <div class="step-duration">(20.55s)</div>
+          <span class="flex-left-space">steps/login_steps.py:7</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I navigate to the home page</span>
+          </div>
+          <div class="step-duration">(0.83s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:6</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I search for the product </span>
+            <b>&quot;Electra Bra Top&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(1.75s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:11</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the product </span>
+            <b>&quot;Electra Bra Top&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.73s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:16</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the size </span>
+            <b>&quot;M&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.19s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:21</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the color </span>
+            <b>&quot;Black&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.05s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:26</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I click the add to cart button</span>
+          </div>
+          <div class="step-duration">(3.06s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:31</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I navigate to my cart</span>
+          </div>
+          <div class="step-duration">(1.96s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:37</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I click the checkout button</span>
+          </div>
+          <div class="step-duration">(2.21s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:42</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I click the NEXT button</span>
+          </div>
+          <div class="step-duration">(2.07s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:47</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I click the PLACE ORDER button</span>
+          </div>
+          <div class="step-duration">(2.07s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:53</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I validate the order is completed</span>
+          </div>
+          <div class="step-duration">(3.36s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:59</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>Then </i></b>
+            <span>Login: I log out</span>
+          </div>
+          <div class="step-duration">(1.35s)</div>
+          <span class="flex-left-space">steps/login_steps.py:34</span>
+        </div>
+        <div class="embeds"></div>
+      </div>
+      <div class="scenario-header passed " id="f2-s2-h">
         <div class="scenario-tags">
           <span>@smoke</span>
         </div>
@@ -1223,11 +1420,132 @@ async function render_content(element) {
         </div>
         <div class="scenario-info">
           <div class="scenario-name" id="f2-s2" onclick="expand_this_only(this)">Scenario: Order Placement : An invalid quantity is provided</div>
-          <div class="scenario-duration">Scenario duration: 0.00s</div>
+          <div class="scenario-duration">Scenario duration: 11.23s</div>
         </div>
       </div>
-      <div class="scenario-capsule untested " id="f2-s2-c"></div>
-      <div class="scenario-header untested " id="f2-s3-h">
+      <div class="scenario-capsule passed " id="f2-s2-c">
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>Given </i></b>
+            <span>Login: I navigate to login page</span>
+          </div>
+          <div class="step-duration">(0.90s)</div>
+          <span class="flex-left-space">steps/login_steps.py:16</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Login: I complete valid credentials</span>
+          </div>
+          <div class="step-duration">(2.05s)</div>
+          <span class="flex-left-space">steps/login_steps.py:7</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I navigate to the home page</span>
+          </div>
+          <div class="step-duration">(1.61s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:6</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I search for the product </span>
+            <b>&quot;Electra Bra Top&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(1.46s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:11</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the product </span>
+            <b>&quot;Electra Bra Top&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.84s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:16</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the size </span>
+            <b>&quot;M&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.08s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:21</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the color </span>
+            <b>&quot;Black&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.06s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:26</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I set the quantity to </span>
+            <b>&quot;0&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.07s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:64</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I click the add to cart button</span>
+          </div>
+          <div class="step-duration">(3.07s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:31</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I verify the info message regarding the invalid quantity is displayed</span>
+          </div>
+          <div class="step-duration">(0.03s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:74</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>Then </i></b>
+            <span>Login: I log out</span>
+          </div>
+          <div class="step-duration">(1.06s)</div>
+          <span class="flex-left-space">steps/login_steps.py:34</span>
+        </div>
+        <div class="embeds"></div>
+      </div>
+      <div class="scenario-header passed " id="f2-s3-h">
         <div class="scenario-tags">
           <span>@smoke</span>
         </div>
@@ -1242,11 +1560,132 @@ async function render_content(element) {
         </div>
         <div class="scenario-info">
           <div class="scenario-name" id="f2-s3" onclick="expand_this_only(this)">Scenario: Order Placement : The maximum quantity is exceeded</div>
-          <div class="scenario-duration">Scenario duration: 0.00s</div>
+          <div class="scenario-duration">Scenario duration: 11.31s</div>
         </div>
       </div>
-      <div class="scenario-capsule untested " id="f2-s3-c"></div>
-      <div class="scenario-header untested " id="f2-s4-h">
+      <div class="scenario-capsule passed " id="f2-s3-c">
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>Given </i></b>
+            <span>Login: I navigate to login page</span>
+          </div>
+          <div class="step-duration">(0.98s)</div>
+          <span class="flex-left-space">steps/login_steps.py:16</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Login: I complete valid credentials</span>
+          </div>
+          <div class="step-duration">(2.02s)</div>
+          <span class="flex-left-space">steps/login_steps.py:7</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I navigate to the home page</span>
+          </div>
+          <div class="step-duration">(1.55s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:6</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I search for the product </span>
+            <b>&quot;Electra Bra Top&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(1.55s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:11</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the product </span>
+            <b>&quot;Electra Bra Top&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.81s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:16</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the size </span>
+            <b>&quot;M&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.08s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:21</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the color </span>
+            <b>&quot;Black&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.06s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:26</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I set the quantity to </span>
+            <b>&quot;10001&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.06s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:64</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I click the add to cart button</span>
+          </div>
+          <div class="step-duration">(3.05s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:31</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I verify the info message regarding the maximum quantity is displayed</span>
+          </div>
+          <div class="step-duration">(0.03s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:69</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>Then </i></b>
+            <span>Login: I log out</span>
+          </div>
+          <div class="step-duration">(1.13s)</div>
+          <span class="flex-left-space">steps/login_steps.py:34</span>
+        </div>
+        <div class="embeds"></div>
+      </div>
+      <div class="scenario-header passed " id="f2-s4-h">
         <div class="scenario-tags">
           <span>@smoke</span>
         </div>
@@ -1261,36 +1700,17 @@ async function render_content(element) {
         </div>
         <div class="scenario-info">
           <div class="scenario-name" id="f2-s4" onclick="expand_this_only(this)">Scenario: Order Placement : Order Placement success</div>
-          <div class="scenario-duration">Scenario duration: 0.00s</div>
+          <div class="scenario-duration">Scenario duration: 10.74s</div>
         </div>
       </div>
-      <div class="scenario-capsule untested " id="f2-s4-c"></div>
-      <div class="scenario-header passed " id="f2-s5-h">
-        <div class="scenario-tags">
-          <span>@smoke</span>
-        </div>
-        <div class="scenario-tags">
-          <span>@regression</span>
-        </div>
-        <div class="scenario-tags">
-          <span>@order_placement</span>
-        </div>
-        <div class="scenario-tags">
-          <span>@order_placement_size_not_selected</span>
-        </div>
-        <div class="scenario-info">
-          <div class="scenario-name" id="f2-s5" onclick="expand_this_only(this)">Scenario: Order Placement : Order Placement success</div>
-          <div class="scenario-duration">Scenario duration: 10.82s</div>
-        </div>
-      </div>
-      <div class="scenario-capsule passed " id="f2-s5-c">
+      <div class="scenario-capsule passed " id="f2-s4-c">
         <div class="step-capsule passed ">
           <div class="step-status">PASS</div>
           <div class="step-decorator">
             <b><i>Given </i></b>
             <span>Login: I navigate to login page</span>
           </div>
-          <div class="step-duration">(1.33s)</div>
+          <div class="step-duration">(0.90s)</div>
           <span class="flex-left-space">steps/login_steps.py:16</span>
         </div>
         <div class="embeds"></div>
@@ -1300,7 +1720,7 @@ async function render_content(element) {
             <b><i>When </i></b>
             <span>Login: I complete valid credentials</span>
           </div>
-          <div class="step-duration">(2.08s)</div>
+          <div class="step-duration">(2.02s)</div>
           <span class="flex-left-space">steps/login_steps.py:7</span>
         </div>
         <div class="embeds"></div>
@@ -1310,7 +1730,7 @@ async function render_content(element) {
             <b><i>When </i></b>
             <span>Order Placement: I navigate to the home page</span>
           </div>
-          <div class="step-duration">(0.77s)</div>
+          <div class="step-duration">(1.38s)</div>
           <span class="flex-left-space">steps/order_placement_steps.py:6</span>
         </div>
         <div class="embeds"></div>
@@ -1322,7 +1742,7 @@ async function render_content(element) {
             <b>&quot;Electra Bra Top&quot;</b>
             <span></span>
           </div>
-          <div class="step-duration">(1.69s)</div>
+          <div class="step-duration">(1.53s)</div>
           <span class="flex-left-space">steps/order_placement_steps.py:11</span>
         </div>
         <div class="embeds"></div>
@@ -1334,7 +1754,7 @@ async function render_content(element) {
             <b>&quot;Electra Bra Top&quot;</b>
             <span></span>
           </div>
-          <div class="step-duration">(0.66s)</div>
+          <div class="step-duration">(0.79s)</div>
           <span class="flex-left-space">steps/order_placement_steps.py:16</span>
         </div>
         <div class="embeds"></div>
@@ -1342,12 +1762,12 @@ async function render_content(element) {
           <div class="step-status">PASS</div>
           <div class="step-decorator">
             <b><i>When </i></b>
-            <span>Order Placement: I select the color </span>
-            <b>&quot;Black&quot;</b>
+            <span>Order Placement: I select the size </span>
+            <b>&quot;M&quot;</b>
             <span></span>
           </div>
-          <div class="step-duration">(0.17s)</div>
-          <span class="flex-left-space">steps/order_placement_steps.py:26</span>
+          <div class="step-duration">(0.08s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:21</span>
         </div>
         <div class="embeds"></div>
         <div class="step-capsule passed ">
@@ -1356,7 +1776,7 @@ async function render_content(element) {
             <b><i>When </i></b>
             <span>Order Placement: I click the add to cart button</span>
           </div>
-          <div class="step-duration">(3.06s)</div>
+          <div class="step-duration">(3.05s)</div>
           <span class="flex-left-space">steps/order_placement_steps.py:31</span>
         </div>
         <div class="embeds"></div>
@@ -1376,7 +1796,123 @@ async function render_content(element) {
             <b><i>Then </i></b>
             <span>Login: I log out</span>
           </div>
-          <div class="step-duration">(1.02s)</div>
+          <div class="step-duration">(0.97s)</div>
+          <span class="flex-left-space">steps/login_steps.py:34</span>
+        </div>
+        <div class="embeds"></div>
+      </div>
+      <div class="scenario-header passed " id="f2-s5-h">
+        <div class="scenario-tags">
+          <span>@smoke</span>
+        </div>
+        <div class="scenario-tags">
+          <span>@regression</span>
+        </div>
+        <div class="scenario-tags">
+          <span>@order_placement</span>
+        </div>
+        <div class="scenario-tags">
+          <span>@order_placement_size_not_selected</span>
+        </div>
+        <div class="scenario-info">
+          <div class="scenario-name" id="f2-s5" onclick="expand_this_only(this)">Scenario: Order Placement : Order Placement success</div>
+          <div class="scenario-duration">Scenario duration: 11.26s</div>
+        </div>
+      </div>
+      <div class="scenario-capsule passed " id="f2-s5-c">
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>Given </i></b>
+            <span>Login: I navigate to login page</span>
+          </div>
+          <div class="step-duration">(0.97s)</div>
+          <span class="flex-left-space">steps/login_steps.py:16</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Login: I complete valid credentials</span>
+          </div>
+          <div class="step-duration">(2.33s)</div>
+          <span class="flex-left-space">steps/login_steps.py:7</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I navigate to the home page</span>
+          </div>
+          <div class="step-duration">(1.29s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:6</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I search for the product </span>
+            <b>&quot;Electra Bra Top&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(1.47s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:11</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the product </span>
+            <b>&quot;Electra Bra Top&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.86s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:16</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I select the color </span>
+            <b>&quot;Black&quot;</b>
+            <span></span>
+          </div>
+          <div class="step-duration">(0.07s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:26</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I click the add to cart button</span>
+          </div>
+          <div class="step-duration">(3.06s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:31</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>When </i></b>
+            <span>Order Placement: I verify the required field error message is displayed</span>
+          </div>
+          <div class="step-duration">(0.02s)</div>
+          <span class="flex-left-space">steps/order_placement_steps.py:79</span>
+        </div>
+        <div class="embeds"></div>
+        <div class="step-capsule passed ">
+          <div class="step-status">PASS</div>
+          <div class="step-decorator">
+            <b><i>Then </i></b>
+            <span>Login: I log out</span>
+          </div>
+          <div class="step-duration">(1.17s)</div>
           <span class="flex-left-space">steps/login_steps.py:34</span>
         </div>
         <div class="embeds"></div>
